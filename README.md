@@ -14,10 +14,10 @@ Total Marks: 10<br> Deadline: December 25, 2022
 <b>Question 1:</b> Suppose you are developing a mobile wallet application. The application requests the user's username and password. Your roll number serves as your default username and password. If authentication is unsuccessful, the message "Please check your username and password and reenter it" will appear. 
 <br>The following options will be displayed by the application if the username and password are correct:
 <ol>
-	<li>Check Balance</li>
-	<li>Withraw Cash</li>
-	<li>Pay Bills</li>
-<li>Change Password</li>
+	<li>1: Check Balance</li>
+	<li>2: Withraw Cash</li>
+	<li>3: Pay Bills</li>
+<li>4: Change Password</li>
 
 </ol>
 <ul>
