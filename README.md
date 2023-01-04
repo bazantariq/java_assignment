@@ -11,11 +11,15 @@ Total Marks: 10<br> Deadline: December 25, 2022
 <li>The assignment file name must be your roll number e.g., COMPF22BSR01. If the name of assignment is anything other than your roll number than the assignment will be considered invalid and zero marks will be given.
 <li>Send your assignment as soft copy by email at tariq@xs.ustb.edu.cn
 <br><br>
-<b>Question 1:</b> Suppose you are developing a mobile wallet application. The application requests the user's username and password. Your roll number serves as your default username and password. If authentication is unsuccessful, the message "Please check your username and password and reenter it" will appear. The following options will be displayed by the application if the username and password are correct:
-1.	Check Balance
-2.	Withdraw Cash
-3.	Pay Bills
-4.	Change Password
+<b>Question 1:</b> Suppose you are developing a mobile wallet application. The application requests the user's username and password. Your roll number serves as your default username and password. If authentication is unsuccessful, the message "Please check your username and password and reenter it" will appear. 
+<br>The following options will be displayed by the application if the username and password are correct:
+<ol>
+	<li>Check Balance</li>
+	<li>Withraw Cash</li>
+	<li>Pay Bills</li>
+<li>Change Password</li>
+
+</ol>
 <ul>
 <li>The application will display the user's current amount and deduct Rs. 2.5/- as a service charge from user’s account if option 1, "Check Balance" is chosen.
 <li>The application will ask user to enter amount for withdrawal and it will subtract this amount from the user's account together with a service charge of Rs. 18.50/- if option 2, "Withdraw Cash" is chosen. Additionally, the application will ask the user if he/she wants a receipt or not? If the user accepts to receive a receipt for this transaction, the application will update his/her balance and subtract the service fee of Rs. 2.5/-.
