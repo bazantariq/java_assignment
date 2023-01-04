@@ -5,10 +5,12 @@ public class question3 {
         Scanner sc = new Scanner(System.in);
         int guess , dice;
         do {
-            System.out.println("Enter guess number");
+            System.out.println("Enter guess number: ");
             guess = sc.nextInt();
+
             dice = (int)(Math.random()*6)+1;
-            System.out.println(dice);
+            System.out.println("Dice number is: "+dice);
+
             if (guess>dice){
                 System.out.println("Oops! your guess is higher then dice number");
             }
