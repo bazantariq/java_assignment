@@ -1,7 +1,7 @@
 package com.assignment.question4;
 
 import java.util.Scanner;
-
+/*WhatsApp wants to send numeric data over the Internet and the company asked you to write a program that will encrypt data so that it may be transmitted more securely. All the data is transmitted as twelve-digit integers. Your application should read a twelve-digit integer entered by the user and encrypt it as follows: Replace each digit with the result of adding 25 to the digit. Then swap the first digit with the second, second digit with the third and so on and finally last digit with first. Then print the encrypted integer. Write a separate program that inputs an encrypted twelve-digit integer and decrypts it (by reversing the encryption scheme) to form the original number.*/
 public class Encryption {
 
     public static void main(String[] args) {

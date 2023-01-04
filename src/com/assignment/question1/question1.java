@@ -1,79 +1,72 @@
 package com.assignment.question1;
 
 import java.util.Scanner;
+/*
+Suppose you are developing a mobile wallet application. The application requests the user's username and password. Your roll number serves as your default username and password. If authentication is unsuccessful, the message "Please check your username and password and reenter it" will appear. The following options will be displayed by the application if the username and password are correct:
+        1.	Check Balance
+        2.	Withdraw Cash
+        3.	Pay Bills
+        4.	Change Password
+
+        	The application will display the user's current amount and deduct Rs. 2.5/- as a service charge from user’s account if option 1, "Check Balance" is chosen.
+        	The application will ask user to enter amount for withdrawal and it will subtract this amount from the user's account together with a service charge of Rs. 18.50/- if option 2, "Withdraw Cash" is chosen. Additionally, the application will ask the user if he/she wants a receipt or not? If the user accepts to receive a receipt for this transaction, the application will update his/her balance and subtract the service fee of Rs. 2.5/-.
+        	The application will ask the user to enter the bill reference number and the amount in order to deduct the appropriate amount from his/her account and display "Transaction Success" if option 3, "Pay Bills" is chosen. Additionally, the application will add 25% of the paid amount to user’s account as cash-back.
+        	The application will prompt the user to input both his old and new passwords if option 4, "Change Password" is chosen. The application will also verify whether the user entered their old password correctly or not and it will display an error notice if the user enters incorrect password. The application will finally display "Password Updated."
+*/
 
 public class question1 {
     public static void main(String a[]) {
-        mobilewallet mb = new mobilewallet(1000);
-        mb.deduct(2.5f);
-
-        double balance = mb.balance;
-
+        String default_username = "SOFTF22BSR01", default_password = "SOFTF22BSR01";
         String username, password;
-
+        int option;
+        double balance = 9999999;
         Scanner sc = new Scanner(System.in);
+
         System.out.println("Enter username");
         username = sc.nextLine();
         System.out.println("Enter password");
         password = sc.nextLine();
-        boolean softf22BSR01 = !password.equals("SOFTF22BSR01");
-        if (!username.equals("SOFTF22BSR01") || !password.equals("SOFTF22BSR01")) {
-            System.out.println("incorrect");
 
+        if (username.equals(default_username) && password.equals(default_password)) {
+            System.out.println("1: Check Balance\n2: Withdraw Cash\n3: Pay Bills\n4: Change Password");
+            System.out.println("Selection any option:");
+            option = sc.nextInt();
 
-        } else if (username.equals("SOFTF22BSR01") && password.equals("SOFTF22BSR01")){
-
-            System.out.println("1: Check Balance" + "\n" + "2: Withdraw Cash" + "\n" + "3: Pay Bills" + "\n" + "4: Change Password" + "\n" + "select one");
-            int n;
-            n = sc.nextInt();
-            if (n == 1) {
-                System.out.println("your balance is: " + "\t" + mb.getBalance());
-            } else if (n == 2) {
-                System.out.println("Enter amount for withdraw");
-                float w1 = sc.nextFloat();
-                balance = balance - 18.5;
-                if (w1 < balance) {
-                    balance = balance - w1;
-
-                    System.out.println("After withdraw your balance is: " + balance);
+            if (option == 1) {
+                System.out.println("Your balance is: " + (balance - 2.5));
+            } else if (option == 2) {
+                System.out.println("Enter amount for withdrawal");
+                double amount = sc.nextDouble();
+                balance = (balance - 18.50) - amount;
+                System.out.println("Select Receipt Option:\n1: Need Receipt\n2. No");
+                int receipt = sc.nextInt();
+                if (receipt == 1) {
+                    balance = balance - 2.5;
+                    System.out.println("Remaining Balace is:" + balance);
                 } else {
-                    System.out.println("your amount is more then balance");
-                }
-
-
-                if (w1 < balance) {
-                    System.out.println("1: i want receipt" + "\n" + "2: no, I do not need receipt" + "\n" + "Please select one option ");
-                    int v = sc.nextInt();
-                    if (v == 1) {
-                        balance = balance - 2.5;
-                        System.out.println("your balance is now: " + balance);
-                    }
+                    System.out.println("Remaining Balace is:" + balance);
                 }
             }
-            if (n == 3) {
+            if (option == 3) {
                 System.out.println("Enter bill amount");
-                float d;
-                d = sc.nextFloat();
-                if (d < balance) {
-                    balance = balance - d;
-                    d = d * (25 / 100f);
-                    balance = balance + d;
-                    System.out.println("Transaction successful: " + balance);
-
-                }
+                double bill_amount = sc.nextDouble();
+                double cashback = bill_amount * (25 / 100f);
+                balance = (balance - bill_amount) + cashback;
+                System.out.println("Transaction Success\nRemaining Balance is: " + balance);
             }
-            if (n == 4) {
-                System.out.println("Enter old password");
+            if (option == 4) {
+                System.out.println("Enter default password");
                 Scanner sn = new Scanner(System.in);
-                String old_password = sn.nextLine();
-                if (old_password.equals("SOFTF22BSR01")) {
-                    System.out.println("Password is correct" + "\n" + "Now enter new password.");
-                    String  new_password = sn.nextLine();
-                    System.out.println("Password Updated: " + new_password);
-                }else {
-                    System.out.println("Error");
+                String default_password2 = sn.nextLine();
+
+                if (default_password2.equals(default_password)) {
+                    System.out.println("Enter New Password");
+                    default_password = sn.nextLine();
+                    System.out.println("Password updated: " + default_password);
                 }
             }
+        } else {
+            System.out.println("Invalid username or password");
         }
     }
 }
