@@ -7,10 +7,8 @@ public class Encryption {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         long d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, temp;
-        System.out.println("Enter a Twelve Digit Number to encrypt  :");
+        System.out.print("Enter twelve digit number to encrypt");
         long number = sc.nextLong();
-
-        //saprate every number and adding 25
         d1 = ((number / 100000000000L) + 25) % 10;
         d2 = ((number / 10000000000L) % 10 + 25) % 10;
         d3 = ((number / 1000000000) % 10 + 25) % 10;
@@ -39,7 +37,7 @@ public class Encryption {
         d10 = d11;
         d11 = d12;
         d12 = temp;
-        System.out.println("Your Encrypted Number is :" + d1 +""+ d2+""+ d3+""+ d4+""+ d5+""+d6+""+ d7+""+ d8+""+d9+""+d10+""+d11+""+d12);
+        System.out.println("Your Encrypted Number is :" + d1 + "" + d2 + "" + d3 + "" + d4 + "" + d5 + "" + d6 + "" + d7 + "" + d8 + "" + d9 + "" + d10 + "" + d11 + "" + d12);
 
     }
 

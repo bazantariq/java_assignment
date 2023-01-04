@@ -5,11 +5,10 @@ import java.util.Scanner;
 public class Decryption {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-
         long d1, d2, d3, d4, d5, d6, d7, d8, d9, d10, d11, d12, temp;
-        System.out.println("Enter a Twelve Digit Encrypted Number : ");
-
+        System.out.print("Enter twelve digit encrypted number");
         long n = sc.nextLong();
+
         d1 = 25 + (n / 100000000000L);
         d2 = 25 + (n / 10000000000L) % 10;
         d3 = 25 + (n / 1000000000) % 10;
@@ -47,8 +46,6 @@ public class Decryption {
         d3 = d2;
         d2 = d1;
         d1 = temp;
-
-        System.out.println("Your Decrypted Number is :" + d1 +""+ d2+""+ d3+""+ d4+""+ d5+""+d6+""+ d7+""+ d8+""+d9+""+d10+""+d11+""+d12);
+        System.out.println("Your decrypted number is: " + d1 + "" + d2 + "" + d3 + "" + d4 + "" + d5 + "" + d6 + "" + d7 + "" + d8 + "" + d9 + "" + d10 + "" + d11 + "" + d12);
     }
-
 }
