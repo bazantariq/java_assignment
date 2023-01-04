@@ -13,13 +13,13 @@ Total Marks: 10<br> Deadline: December 25, 2022
 <br><br>
 <b>Question 1:</b> Suppose you are developing a mobile wallet application. The application requests the user's username and password. Your roll number serves as your default username and password. If authentication is unsuccessful, the message "Please check your username and password and reenter it" will appear. 
 <br>The following options will be displayed by the application if the username and password are correct:
-<ol>
-	<li>1: Check Balance</li>
-	<li>2: Withraw Cash</li>
-	<li>3: Pay Bills</li>
-<li>4: Change Password</li>
+<br>
+	<br>1: Check Balance
+	<br>2: Withraw Cash
+	<br>3: Pay Bills
+<br>4: Change Password
 
-</ol>
+<br>
 <ul>
 <li>The application will display the user's current amount and deduct Rs. 2.5/- as a service charge from user’s account if option 1, "Check Balance" is chosen.
 <li>The application will ask user to enter amount for withdrawal and it will subtract this amount from the user's account together with a service charge of Rs. 18.50/- if option 2, "Withdraw Cash" is chosen. Additionally, the application will ask the user if he/she wants a receipt or not? If the user accepts to receive a receipt for this transaction, the application will update his/her balance and subtract the service fee of Rs. 2.5/-.
