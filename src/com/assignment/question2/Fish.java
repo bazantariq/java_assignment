@@ -1,34 +1,15 @@
 package com.assignment.question2;
 
-import java.util.Scanner;
-
 public class Fish {
     String name;
-    String sauce;
-    int price;
-    int quantity;
-    int price_sauce;
+    int psauce, msauce, ssauce;
 
-    public  Fish(String name ,String sauce,int price , int price_sauce , int quantity ){
+    public Fish(String name, int psauce, int msauce, int ssauce) {
         this.name = name;
-        this.sauce = sauce;
-        this.price=price;
-        this.quantity=quantity;
-        this.price_sauce = price_sauce;
-
+        this.psauce = psauce;
+        this.msauce = msauce;
+        this.ssauce = ssauce;
     }
-    public  String description () {
-        return "The name of fish is "+ name + " and price is $" + price + ". The quantity of sauces is "+ quantity ;
-
-    }
-
-
-
-    public double getCalbill(){
-        return    price =  price + (price_sauce *quantity);
-
-    }
-
 
     public String getName() {
         return name;
@@ -38,37 +19,49 @@ public class Fish {
         this.name = name;
     }
 
-    public String getSauce() {
-        return sauce;
+    public int getPsauce() {
+        return psauce;
     }
 
-    public void setSauce(String sauce) {
-        this.sauce = sauce;
+    public void setPsauce(int psauce) {
+        this.psauce = psauce;
     }
 
-    public int getPrice() {
-        return price;
+    public int getMsauce() {
+        return msauce;
     }
 
-    public void setPrice(int price) {
-        this.price = price;
+    public void setMsauce(int msauce) {
+        this.msauce = msauce;
     }
 
-    public int getPrice_sauce() {
-        return price_sauce;
+    public int getSsauce() {
+        return ssauce;
     }
 
-    public void setPrice_sauce(int price_sauce) {
-        this.price_sauce = price_sauce;
+    public void setSsauce(int ssauce) {
+        this.ssauce = ssauce;
     }
 
-    public int getQuantity() {
-        return quantity;
+    public String showDescription() {
+        return "\nFish: " + getName() +
+                "\nP-Sauce: " + getPsauce() +
+                "\nM-Sauce: " + getMsauce() +
+                "\nS-Sauce: " + getSsauce();
     }
 
-    public void setQuantity(int quantity) {
-        this.quantity = quantity;
+    public String calculateBill() {
+
+        double bill = 0;
+        if (name.equals("Mullee")) {
+            bill = 15 + ((3) * (getSsauce() + getPsauce() + getMsauce()));
+        }
+        if (name.equals("Rohu")) {
+            bill = 15 + ((3) * (getSsauce() + getPsauce() + getMsauce()));
+        }
+        if (name.equals("Theila")) {
+            bill = 15 + ((3) * (getSsauce() + getPsauce() + getMsauce()));
+        }
+        return "Total Bill: " + bill;
     }
-
-
 }
