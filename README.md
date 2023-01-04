@@ -16,23 +16,33 @@ Total Marks: 10<br> Deadline: December 25, 2022
 2.	Withdraw Cash
 3.	Pay Bills
 4.	Change Password
-
-	The application will display the user's current amount and deduct Rs. 2.5/- as a service charge from user’s account if option 1, "Check Balance" is chosen.
-	The application will ask user to enter amount for withdrawal and it will subtract this amount from the user's account together with a service charge of Rs. 18.50/- if option 2, "Withdraw Cash" is chosen. Additionally, the application will ask the user if he/she wants a receipt or not? If the user accepts to receive a receipt for this transaction, the application will update his/her balance and subtract the service fee of Rs. 2.5/-.
-	The application will ask the user to enter the bill reference number and the amount in order to deduct the appropriate amount from his/her account and display "Transaction Success" if option 3, "Pay Bills" is chosen. Additionally, the application will add 25% of the paid amount to user’s account as cash-back.
-	The application will prompt the user to input both his old and new passwords if option 4, "Change Password" is chosen. The application will also verify whether the user entered their old password correctly or not and it will display an error notice if the user enters incorrect password. The application will finally display "Password Updated."
+<ul>
+<li>The application will display the user's current amount and deduct Rs. 2.5/- as a service charge from user’s account if option 1, "Check Balance" is chosen.
+<li>The application will ask user to enter amount for withdrawal and it will subtract this amount from the user's account together with a service charge of Rs. 18.50/- if option 2, "Withdraw Cash" is chosen. Additionally, the application will ask the user if he/she wants a receipt or not? If the user accepts to receive a receipt for this transaction, the application will update his/her balance and subtract the service fee of Rs. 2.5/-.
+<li>The application will ask the user to enter the bill reference number and the amount in order to deduct the appropriate amount from his/her account and display "Transaction Success" if option 3, "Pay Bills" is chosen. Additionally, the application will add 25% of the paid amount to user’s account as cash-back.
+<li>The application will prompt the user to input both his old and new passwords if option 4, "Change Password" is chosen. The application will also verify whether the user entered their old password correctly or not and it will display an error notice if the user enters incorrect password. The application will finally display "Password Updated."
+</ul>
 <br><br>
 <b>Question 2:</b> Create a java class named Fish that stores information about Fish. It should contain the following:  
-	Variables to store the name of the fish (Mullee, Rohu, or Theila), the number of Parsley Sauce, the number of Mint Sauce, and the number of Salmoriglio Sauce. 
-	Constructor(s) that set all of the instance variables. 
-	Methods to get and set the instance variables.
-	A method named calculateBill( ) that returns a double that is the cost of the fish. 
-Fish cost is determined by: 
-i) Mullee: $15 + $3 per sauce 
-ii) Rohu: $25 + $5 per sauce 
-iii) Theila: $35 + $7 per Sauce
-	Public method named showDescription( ) that returns a String containing the fish name, quantity of each sauce.
+<ul>
+<li>Variables to store the name of the fish (Mullee, Rohu, or Theila), the number of Parsley Sauce, the number of Mint Sauce, and the number of Salmoriglio Sauce. 
+<li>Constructor(s) that set all of the instance variables. 
+<li>Methods to get and set the instance variables.
+<li>A method named calculateBill( ) that returns a double that is the cost of the fish. 
+</ul>
+<br>
+Fish cost is determined by:
+<ol>
+	<li>Mullee: $15 + $3 per sauce</li>
+	<li>Rohu: $25 + $5 per sauce</li>
+	<li>Theila: $35 + $7 per Sauce</li>
+</ol> 
+ 
+<ul>
+<li>Public method named showDescription( ) that returns a String containing the fish name, quantity of each sauce.
 Write code to create several fishes and output their descriptions. For example, a Mullee Fish with one mint sauce, two parsley sauce and three salmoriglio sauce should cost a total of $33. Now Create a class named FishOrder that allows up to three Fish objects to be saved in an order. Finally call showDescription( ) and calculateBill( ) for every object.
+</li>
+</ul>
 <br><br>
 <b>Question 3:</b>  Let's assume that you have a dice which, when rolled, gives a number between 1 and 6. You are supposed to guess what the number is? If your guess number is higher than the dice number, the program should display “Oops! your guess is higher than dice number.” If your guess number is lower then the dice number, the program should display “Oops! your number is lower than dice number.” The program should use a do-while loop that repeats until you correctly guess the dice number.
 <br><br>
